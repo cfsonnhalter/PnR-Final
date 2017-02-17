@@ -66,7 +66,7 @@ class GoPiggy(pigo.Pigo):
         self.shimmy()
         self.tango()
         self.dab()
-        #self.back_it_up()
+        self.head_shake()
 
     def shimmy(self):
         print('Shimmy')
