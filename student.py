@@ -63,9 +63,9 @@ class GoPiggy(pigo.Pigo):
     def dance(self):
         print("Piggy dance")
         ##### WRITE YOUR FIRST PROJECT HERE
-        self.shimmy()
-        self.tango()
-        #self.sprinkler()
+        #self.shimmy()
+        #self.tango()
+        self.dab()
         #self.back_it_up()
 
     def shimmy(self):
@@ -84,6 +84,11 @@ class GoPiggy(pigo.Pigo):
             self.encB(9)
             self.encL(30)
 
+    def dab(self):
+        print('dab')
+        for x in range(3)
+            self.encF(18)
+            self.encL(90)
 
 
 
