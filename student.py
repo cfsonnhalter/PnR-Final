@@ -68,21 +68,21 @@ class GoPiggy(pigo.Pigo):
         #self.sprinkler()
         #self.back_it_up()
 
-        def shimmy(self):
-            print('Shimmy')
-            for x in range(3):
-                self.servo(30)
-                self.encR(3)
-                self.servo(140)
-                self.encL(3)
+    def shimmy(self):
+        print('Shimmy')
+        for x in range(3):
+            self.servo(30)
+            self.encR(3)
+            self.servo(140)
+            self.encL(3)
 
-        def tango(self):
-            print('tango')
-            for x in range(1):
-                self.fwd(5)
-                self.right.rot(180)
-                self.bwd(5)
-                self.left.rot(90)
+    def tango(self):
+        print('tango')
+        for x in range(1):
+            self.fwd(5)
+            self.right.rot(180)
+            self.bwd(5)
+            self.left.rot(90)
 
 
     ########################
