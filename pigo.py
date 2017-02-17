@@ -117,10 +117,10 @@ class Pigo(object):
         bwd()
         time.sleep(1 * (enc / 18))
 
-        def servo(self, val):
-            print('Moving Servo to ' + str(val) + 'deg')
-            servo(val)
-            time.sleep(.1)
+    def servo(self, val):
+        print('Moving Servo to ' + str(val) + 'deg')
+        servo(val)
+        time.sleep(.1)
 
     # DUMP ALL VALUES IN THE SCAN ARRAY
     def flush_scan(self):
