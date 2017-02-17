@@ -79,10 +79,10 @@ class GoPiggy(pigo.Pigo):
     def tango(self):
         print('tango')
         for x in range(1):
-            self.fwd(5)
-            self.right.rot(180)
-            self.bwd(5)
-            self.left.rot(90)
+            self.encF(5)
+            self.encR(18)
+            self.encB(5)
+            self.encL(9)
 
 
     ########################
