@@ -86,7 +86,7 @@ class GoPiggy(pigo.Pigo):
 
     def dab(self):
         print('dab')
-        for x in range(3)
+        for x in range(3):
             self.encF(18)
             self.encL(90)
 
