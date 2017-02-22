@@ -104,6 +104,7 @@ class GoPiggy(pigo.Pigo):
     def head_shake(self):
         for x in range(5):
             self.servo(30)
+            time.sleep(1)
             self.servo(150)
         self.servo(self.MIDPOINT)
 
