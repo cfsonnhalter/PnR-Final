@@ -108,7 +108,7 @@ class GoPiggy(pigo.Pigo):
         self.servo(self.MIDPOINT)
 
     def jiggy(self):
-        for x in range(20,160,10)
+        for x in range(20,160,10):
             self.servo(20)
 
     ########################
