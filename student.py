@@ -68,7 +68,7 @@ class GoPiggy(pigo.Pigo):
                     print("AHHHHH!")
                     return
             self.encR(7)
-            self.dance()
+        self.dance()
 
     #YOU DECIDE: How does your GoPiggy dance?
     def dance(self):
