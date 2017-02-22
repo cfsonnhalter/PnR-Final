@@ -72,10 +72,11 @@ class GoPiggy(pigo.Pigo):
     def dance(self):
         print("Piggy dance")
         ##### WRITE YOUR FIRST PROJECT HERE
-        self.shimmy()
-        self.tango()
-        self.dab()
-        self.head_shake()
+        #self.shimmy()
+        #self.tango()
+        #self.dab()
+        #self.head_shake()
+        self.jiggy()
 
     def shimmy(self):
         print('Shimmy')
@@ -105,6 +106,10 @@ class GoPiggy(pigo.Pigo):
             self.servo(30)
             self.servo(150)
         self.servo(self.MIDPOINT)
+
+    def jiggy(self):
+        for x in range(20,160,10)
+            self.servo(20)
 
     ########################
     ### MAIN LOGIC LOOP - the core algorithm of my navigation
