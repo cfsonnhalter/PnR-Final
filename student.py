@@ -109,7 +109,7 @@ class GoPiggy(pigo.Pigo):
 
     def jiggy(self):
         for x in range(20,160,10):
-            self.servo(20)
+            self.servo()
 
     ########################
     ### MAIN LOGIC LOOP - the core algorithm of my navigation
