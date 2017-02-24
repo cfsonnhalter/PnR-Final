@@ -58,7 +58,7 @@ class GoPiggy(pigo.Pigo):
         # store the user's answer
         ans = raw_input("Your selection: ")
         # activate the item selected
-        menu.get(ans, [None, error])[1]()+
+        menu.get(ans, [None, error])[1]()
 
     def turn_test(self):
         while True:
