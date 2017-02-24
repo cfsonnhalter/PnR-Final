@@ -58,7 +58,7 @@ class GoPiggy(pigo.Pigo):
         # store the user's answer
         ans = raw_input("Your selection: ")
         # activate the item selected
-        menu.get(ans, [None, error])[1]()
+        menu.get(ans, [None, error])[1]()+
 
     def turn_test(self):
         while True:
@@ -78,10 +78,11 @@ class GoPiggy(pigo.Pigo):
         # make self.turn_track go back to zero
         if self.turn_track > 0:
             print("I must have turned right a lot i need to turn left.")
+            self.encL(self.turn_track)
         elif self.turn_track < 0:
             print('I must have turned left a lot and now I have to self.encR(??)')
-            abs(self.turn_track)
-            self.encR(abs(-18))
+            turn = abs(self.turn_track)
+            self.encR(turn)
 
 
 
