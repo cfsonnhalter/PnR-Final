@@ -77,7 +77,7 @@ class GoPiggy(pigo.Pigo):
         print("Now I'll turn back to the starting position.")
         # make self.turn_track go back to zero
         if self.turn_track > 0:
-            #I must have turned right a lot i need to turn left
+            print("I must have turned right a lot i need to turn left.")
         elif self.turn_track < 0:
             print('I must have turned left a lot and now I have to self.encR(??)')
             abs(self.turn_track)
