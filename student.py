@@ -96,7 +96,8 @@ class GoPiggy(pigo.Pigo):
     def total_obstacles(self):
         counter = 0
         counter += self.count_obstacles
-         # turn your robotfor y in range(3):
+         # turn your robot
+        for y in range(3):
             for x in range(self.MIDPOINT - 60, self.MIDPOINT + 60, 2):
                 self.servo(x)
                 if self.dist() < 30:
