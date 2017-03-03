@@ -93,6 +93,21 @@ class GoPiggy(pigo.Pigo):
         return counter
 
 
+    def total_obstacles(self):
+        counter = 0
+        counter += self.count_obstacles
+         # turn your robotfor y in range(3):
+            for x in range(self.MIDPOINT - 60, self.MIDPOINT + 60, 2):
+                self.servo(x)
+                if self.dist() < 30:
+                    print("AHHHHH!")
+                    return
+            self.encR(7)
+        self.dance()
+
+
+
+
     def turn_test(self):
         while True:
             ans = raw_input('Turn right, left or stop? (r/l/s): ')
