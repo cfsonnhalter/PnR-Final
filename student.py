@@ -92,13 +92,12 @@ class GoPiggy(pigo.Pigo):
         print('Total number of obstacles in this scan:' + str(counter))
         return counter
 
-
     def total_obstacles(self):
         counter = 0
         counter += self.count_obstacles
          # turn your robot
         self.encL(9)
-        self.scan
+
 
 
 
