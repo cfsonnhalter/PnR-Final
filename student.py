@@ -50,7 +50,7 @@ class GoPiggy(pigo.Pigo):
                 "c": ("Calibrate", self.calibrate),
                 "t": ("Turn Test", self.turn_test),
                 "s": ("Check status", self.status),
-                "o": ("Check for obstacles", self.total_obstacles()),
+                #"o": ("Check for obstacles", self.total_obstacles()),
                 "q": ("Quit", quit)
                 }
         # loop and print the menu...
@@ -238,4 +238,8 @@ def quit():
 ##################################################################
 ######## The app starts right here when we instantiate our GoPiggy
 
-g = GoPiggy()
+try:
+    g = GoPiggy()
+except (KeyboardInterrupt, SystemExit):
+    from gopigo import *
+    stop()
