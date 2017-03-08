@@ -50,7 +50,7 @@ class GoPiggy(pigo.Pigo):
                 "c": ("Calibrate", self.calibrate),
                 "t": ("Turn Test", self.turn_test),
                 "s": ("Check status", self.status),
-                "o": ("Count Obstacles", self.nav),
+                "o": ("Check for obstacles", self.total_obstacles()),
                 "q": ("Quit", quit)
                 }
         # loop and print the menu...
@@ -213,9 +213,7 @@ class GoPiggy(pigo.Pigo):
     def cruise(self):
         self.fwd()
         while self.is_clear():
-            time.sleep(.1)
-        self.stop()
-        self.encB(3)
+            self.encF(10)
 
 
     def encR(self, enc):
