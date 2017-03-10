@@ -92,17 +92,6 @@ class GoPiggy(pigo.Pigo):
         print('Total number of obstacles in this scan:' + str(counter))
         return counter
 
-  #   def total_obstacles(self):
-  #   counter = 0
-  #   counter += self.count_obstacles
-  #       # turn your robot
-  #      self.encL(9)
-
-
-
-
-
-
     def turn_test(self):
         while True:
             ans = raw_input('Turn right, left or stop? (r/l/s): ')
@@ -218,9 +207,12 @@ class GoPiggy(pigo.Pigo):
             self.encR(6)
 
     def cruise(self):
-        self.fwd()
+        self.fwd()  # I added this to pigo
         while self.is_clear():
-            self.encF(10)
+            time.sleep(.1)
+        self.stop()
+        self.encB(3)
+
 
 
     def encR(self, enc):
