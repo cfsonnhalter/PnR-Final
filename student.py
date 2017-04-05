@@ -185,6 +185,24 @@ class GoPiggy(pigo.Pigo):
     ### (kind of a big deal)
     ########################
 
+######## CRUISE FORWARD #######
+    def cruise(self):
+        # look forward
+        self.servo(self.MIDPOINT)
+        # start driving
+
+        self.fwd()
+        # as long as the dist in front is farther than stop_dist
+        while self.dist() > self.STOP_DIST:
+            time.sleep(.075)
+        # STOP!
+        self.stop()
+        # back up a scootch
+        self.encB(3)
+
+    ####def is_clear(self):
+        ###if
+
     def nav(self):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("[ Press CTRL + C to stop me, then run stop.py ]\n")
@@ -199,20 +217,11 @@ class GoPiggy(pigo.Pigo):
                     self.restore_heading()
                     count = 0
         if self.is_clear():
-            self.cruise
-        answer = self.choose_path()
-        if answer == "left":
-            self.encL(6)
-        elif answer == "right":
-            self.encR(6)
-
-    def cruise(self):
-        self.fwd()  # I added this to pigo
-        while self.is_clear():
-            time.sleep(.1)
-        self.stop()
-        self.encB(3)
-
+            answer = self.choose_path()
+            if answer == "left":
+                self.encL(6)
+            elif answer == "right":
+                self.encR(6)
 
 
     def encR(self, enc):
