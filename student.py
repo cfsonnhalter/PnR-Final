@@ -186,6 +186,23 @@ class GoPiggy(pigo.Pigo):
     ########################
 
 ######## CRUISE FORWARD #######
+    ######### def cruise(self):
+        # look forward
+        # self.servo(self.MIDPOINT)
+        # start driving
+
+        # self.fwd()
+        # as long as the dist in front is farther than stop_dist
+        #while self.dist() > self.STOP_DIST:
+           # time.sleep(.075)
+        # STOP!
+       # self.stop()
+        # back up a scootch
+       ####### self.encB(3) ###########
+
+    ####def is_clear(self):
+        ###if
+
     def cruise(self):
         # look forward
         self.servo(self.MIDPOINT)
@@ -199,9 +216,6 @@ class GoPiggy(pigo.Pigo):
         self.stop()
         # back up a scootch
         self.encB(3)
-
-    ####def is_clear(self):
-        ###if
 
     def nav(self):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
