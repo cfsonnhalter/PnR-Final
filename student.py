@@ -217,36 +217,27 @@ class GoPiggy(pigo.Pigo):
         # back up a scootch
         self.encB(3)
 
+
     def nav(self):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("[ Press CTRL + C to stop me, then run stop.py ]\n")
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         # this is the loop part of the "main logic loop"
-        count = 0
         while True:
-            while self.is_clear():
-                self.encF(10)
-                count += 1
-                if count > 5 and self.turn_track !=0:
-                    self.restore_heading()
-                    count = 0
-        if self.is_clear():
-            self.cruise(1)
-           # answer = self.choose_path()
-            #if answer == "left":
-             #   self.encL(6)
-            #elif answer == "right":
-             #   self.encR(6)
+            if self.is_clear():
+                self.cruise()
+            answer = self.choose_path()
+            if answer == "left":
+                self.encL(6)
+            elif answer == "right":
+                self.encR(6)
 
-
-    def encR(self, enc):
-        pigo.Pigo.encR(self, enc)
-        self.turn_track += enc
-
-    def encL(self, enc):
-        pigo.Pigo.encL(self, enc)
-        self.turn_track -= enc
-
+    def cruise(self):
+        self.fwd()  # I added this to pigo
+        while self.is_clear():
+            time.sleep(.1)
+        self.stop()
+        self.encB(3)
 
 
 ####################################################
