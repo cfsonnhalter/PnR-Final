@@ -231,11 +231,12 @@ class GoPiggy(pigo.Pigo):
                     self.restore_heading()
                     count = 0
         if self.is_clear():
-            answer = self.choose_path()
-            if answer == "left":
-                self.encL(6)
-            elif answer == "right":
-                self.encR(6)
+            self.cruise()
+           # answer = self.choose_path()
+            #if answer == "left":
+             #   self.encL(6)
+            #elif answer == "right":
+             #   self.encR(6)
 
 
     def encR(self, enc):
