@@ -20,9 +20,9 @@ class GoPiggy(pigo.Pigo):
         # YOU DECIDE: How close can an object get (cm) before we have to stop?
         self.STOP_DIST = 30
         # YOU DECIDE: What left motor power helps straighten your fwd()?
-        self.LEFT_SPEED = 140
+        self.LEFT_SPEED = 120
         # YOU DECIDE: What left motor power helps straighten your fwd()?
-        self.RIGHT_SPEED = 140
+        self.RIGHT_SPEED = 120
         # This one isn't capitalized because it changes during runtime, the others don't
         self.turn_track = 0
         # Our scan list! The index will be the degree and it will store distance
@@ -186,23 +186,6 @@ class GoPiggy(pigo.Pigo):
     ########################
 
 ######## CRUISE FORWARD #######
-    ######### def cruise(self):
-        # look forward
-        # self.servo(self.MIDPOINT)
-        # start driving
-
-        # self.fwd()
-        # as long as the dist in front is farther than stop_dist
-        #while self.dist() > self.STOP_DIST:
-           # time.sleep(.075)
-        # STOP!
-       # self.stop()
-        # back up a scootch
-       ####### self.encB(3) ###########
-
-    ####def is_clear(self):
-        ###if
-
     def cruise(self):
         # look forward
         self.servo(self.MIDPOINT)
