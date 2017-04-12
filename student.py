@@ -194,11 +194,11 @@ class GoPiggy(pigo.Pigo):
         self.fwd()
         # as long as the dist in front is farther than stop_dist
         while self.dist() > self.STOP_DIST:
-            time.sleep(.075)
+            time.sleep(.05)
         # STOP!
         self.stop()
         # back up a scootch
-        self.encB(3)
+        self.encB(5)
 
 
     def nav(self):
@@ -220,7 +220,7 @@ class GoPiggy(pigo.Pigo):
         while self.is_clear():
             time.sleep(.1)
         self.stop()
-        self.encB(3)
+        self.encB()
 
 
 ####################################################
