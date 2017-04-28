@@ -210,9 +210,9 @@ class GoPiggy(pigo.Pigo):
                 self.cruise()
             answer = self.choose_path()
             if answer == "left":
-                self.encL(3)
+                self.encL(4)
             elif answer == "right":
-                self.encR(3)
+                self.encR(4)
 
 
 ####################################################
