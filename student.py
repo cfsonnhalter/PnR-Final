@@ -197,7 +197,7 @@ class GoPiggy(pigo.Pigo):
         # STOP!
         self.stop()
         # back up a bit
-        self.encB(5)
+        self.encB(7)
 
 
     def nav(self):
